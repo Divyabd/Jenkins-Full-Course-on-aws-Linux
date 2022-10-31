@@ -14,6 +14,27 @@ Step 3. If you have multi-java environment, and you want to switch the java vers
 
 alternatives --config java
 
+
+
+
+<h2>  to switch to root user  </h2>
+Become root using “sudo su -” command.
+
+
+<h2> To install Jenkins  </h2>
+
+  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+ yum install fontconfig java-11-openjdk
+  yum install jenkins
+  
+  
+  Else follow below Doc 
+     https://pkg.jenkins.io/redhat-stable/
+
+
+
+
     
     
 
