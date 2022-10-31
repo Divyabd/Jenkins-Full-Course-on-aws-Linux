@@ -27,9 +27,18 @@ Become root using “sudo su -” command.
   yum install jenkins
   
   
+  
+
+  
+  
+  
   Else follow below Doc 
      https://pkg.jenkins.io/redhat-stable/
 
+
+  sudo service start jenkins 
+  
+then go to the  google copy public ip thn start 8080
 
 
 
