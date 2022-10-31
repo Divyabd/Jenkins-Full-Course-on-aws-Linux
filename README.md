@@ -15,8 +15,6 @@ Step 3. If you have multi-java environment, and you want to switch the java vers
 alternatives --config java
 
 
-
-
 <h2>  to switch to root user  </h2>
 Become root using “sudo su -” command.
 
