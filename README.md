@@ -23,6 +23,38 @@ alternatives --config java
 
 Become root using “sudo su -” command.
 
+<h2>To set path for JAVA</h2>
+
+You can use any step to get your java installed path 
+
+Step 1 : sudo find /usr/ -name *jdk
+
+Step 2 :  java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'
+
+ Result : /user/lib/jvm/java_1.01.0(filename)
+ 
+ NOTE :Copy the path 
+ 
+ open .bash_profile using below command 
+ 
+ vi .bash_profile
+ 
+ Once file opened hit I on key board , in a new line enter below line 
+ 
+ JAVA_HOME= /user/lib/jvm/java_1.01.0(filename)
+ 
+ Modify the path 
+ 
+ BEFORE PATH 
+  
+  PATH=$HOME:$HOME/bin
+  
+  MODIFICATION NEED TO DONE LIKE 
+  
+  PATH=$HOME:$JAVA_HOME:$HOME/bin
+  
+  after all chnages hit ESC thn type :wq enter it will exit from vi editor 
+  
 
 <h2> To install Jenkins  </h2>
 
@@ -37,10 +69,18 @@ Become root using “sudo su -” command.
  <h6>Else follow below Doc </h6>
      https://pkg.jenkins.io/redhat-stable/
 
+<h5> TO START AND STOP JENKINS </h5>
 
-  sudo service start jenkins 
+sudo service jenkins start
+
+sudo service jenkins stop
   
-then go to the  google copy public ip thn start 8080
+after jenkins start open the new tab type your ec2 instance public ip:8080
+
+
+
+
+
 
 
 
