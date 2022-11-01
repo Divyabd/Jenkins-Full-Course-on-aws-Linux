@@ -77,6 +77,16 @@ sudo service jenkins stop
   
 after jenkins start open the new tab type your ec2 instance public ip:8080
 
+<h3>Setting up java in Jenkins </h3>
+  Open jenkins-> Manage Jenkins->Global tool Configuration->jdk->name=java , uncheck the install automatically box 
+   JAVA_HONE =/user/lib/jvm/java_1.01.0(filename)
+   
+   save an apply xand build the job 
+   
+   
+
+
+
 
 
 
