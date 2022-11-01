@@ -1,5 +1,5 @@
-# Jenkins-Full-Course-on-aws-Linux
-Full steps of Jenkins On aws Linux 
+# Jenkins-Full-Course-on-AWS-Linux
+Full steps of Jenkins On AWS Linux 
 
 <h1>  Create LINUX ec2 instance </h1>
 
@@ -14,7 +14,7 @@ Step 2. Verify the installation.
 
 java -version
 
-Step 3. If you have multi-java environment, and you want to switch the java version, run:
+Step 3. If you have a multi-java environment, and you want to switch the java version, run:
 
 alternatives --config java
 
@@ -33,13 +33,13 @@ Step 2 :  java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.
 
  Result : /user/lib/jvm/java_1.01.0(filename)
  
- NOTE :Copy the path 
+ NOTE:Copy the path 
  
- open .bash_profile using below command 
+ open .bash_profile using the below command 
  
  vi .bash_profile
  
- Once file opened hit I on key board , in a new line enter below line 
+ Once file is opened hit I on keyboard, in a new line enter the below line 
  
  JAVA_HOME= /user/lib/jvm/java_1.01.0(filename)
  
@@ -49,11 +49,11 @@ Step 2 :  java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.
   
   PATH=$HOME:$HOME/bin
   
-  MODIFICATION NEED TO DONE LIKE 
+  MODIFICATIONS NEED TO BE DONE LIKE 
   
   PATH=$HOME:$JAVA_HOME:$HOME/bin
   
-  after all chnages hit ESC thn type :wq enter it will exit from vi editor 
+  after all changes hit ESC then type :wq enter it will exit from vi editor 
   
 
 <h2> To install Jenkins  </h2>
@@ -75,13 +75,14 @@ sudo service jenkins start
 
 sudo service jenkins stop
   
-after jenkins start open the new tab type your ec2 instance public ip:8080
+after jenkins start 
+open the new tab and type your ec2 instance public ip:8080
 
 <h3>Setting up java in Jenkins </h3>
   Open jenkins-> Manage Jenkins->Global tool Configuration->jdk->name=java , uncheck the install automatically box 
    JAVA_HONE =/user/lib/jvm/java_1.01.0(filename)
    
-   save an apply xand build the job 
+   save and apply  build the job 
    
    
 
