@@ -82,7 +82,8 @@ open the new tab and type your ec2 instance public ip:8080
   Open jenkins-> Manage Jenkins->Global tool Configuration->jdk->name=java , uncheck the install automatically box 
    JAVA_HONE =/user/lib/jvm/java_1.01.0(filename)
    
-   save and apply  build the job 
+   
+save and apply,  build the job 
    
    
 
