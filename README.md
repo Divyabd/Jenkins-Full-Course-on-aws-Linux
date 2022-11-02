@@ -125,6 +125,12 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
  
   Relogin to instance 
  
+ 
+ <h4>To  setup maven jenkins </h4>
+ 
+ Manage Jenkins-> manage plugin->available -> maven invoke -> instal without restart 
+ 
+ Manage Jenkins -> global tool configuration -> maven -> add Maven -> name = Maven , Uncheck install automaticaly box , -> MAVEN _HOME=/opt/maven/apache-maven-3.8.6-bin
   
 
    
