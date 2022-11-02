@@ -63,7 +63,9 @@ ls
 
 <h3> your ec2 instance public ip :9090</h3>
 
-![Alt Image text]("/repository/pictures/security inbound.png"?raw=true "make sure  instance having these inbound rules in attached SG")
+![NOTE]("[/repository](https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git)/pictures/security inbound.png"?raw=true "make sure  instance having these inbound rules in attached SG")
+
+https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git
 
 
 
