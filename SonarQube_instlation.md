@@ -63,6 +63,8 @@ ls
 
 <h3> your ec2 instance public ip :9090</h3>
 
+![Alt Image text]("C:\Users\Divya BD\Pictures/security inbound.png"?raw=true "make sure  instance having these inbound rules in attached SG")
+
 
 
 
