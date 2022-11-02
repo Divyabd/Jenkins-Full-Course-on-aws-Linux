@@ -2,9 +2,16 @@ pipeline{
     agent any
 
     stages{
-        stage("GIT CHECKOUT"){
+        stage('GIT CHECKOUT'){
             steps{
                 git 'https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git'
+            }
+        }
+
+
+        stage('Maven clean'){
+            steps{
+                sh 'mvn -f Maven/pom.xml clean install
             }
         }
     }
