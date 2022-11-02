@@ -61,6 +61,9 @@ ls
 ./sonar.sh status
 
 
+<h3> your ec2 instance public ip :9090</h3>
+
+
 
 
 
