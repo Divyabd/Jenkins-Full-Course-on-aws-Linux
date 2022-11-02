@@ -84,6 +84,49 @@ open the new tab and type your ec2 instance public ip:8080
    
    
 save and apply,  build the job 
+
+
+<h2> MAVEN INSTALATION AND CONFIGURATION</h2>
+
+Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/
+
+ Copy Binary tar.gz archive Link 
+  
+  https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+  
+  In you Linux system  execute below commands
+  
+  cd /opt/maven 
+  
+  wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+  
+  tag -xvzf apache-maven-3.8.6-bin.tar.gz
+  
+  <h6>INSTALATION DNE </h6>
+  
+  <h5> to set up the path </h5>
+  
+  cd apache-maven-3.8.6-bin
+  
+  run <h4>pwd</h4> command to find path where maven installed copy the path run below command
+  
+  cd /root 
+  
+  vi .bash_profile
+  
+  Hit I in key board 
+  
+  M2_HOME=/opt/maven/apache-maven-3.8.6-bin
+  M2=$M2_HOME:bin
+  
+ PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
+ 
+ hit ESC thn type :wq
+ 
+  Relogin to instance 
+ 
+  
+
    
    
 
