@@ -63,7 +63,7 @@ ls
 
 <h3> your ec2 instance public ip :9090</h3>
 
-![](pictures/security%20inbound.pngg)
+![](pictures/security%20inbound.png)
 
 
 
