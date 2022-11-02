@@ -16,4 +16,57 @@ unzip sonarqube-8.0.zip
 
 mv sonarqube-8.0.zip sonarqube
 
+<h5> Create new user </h5>
+
+useradd sonar
+
+visudo 
+
+find out root and add below line in next line 
+
+sonar ALL=(ALL)   ALL
+
+controle X to exit 
+
+to reopen it nano /etc/sudoers
+
+<h4>to change the  the use in sonar qube file </h4>
+
+ls -l 
+
+you should be in /opt/sonar/sonarqube
+
+chown -R sonar:sonar /opt/sonar/sonarqube
+
+chmod -R 775 /opt/sonar/sonarqube
+
+<h4> change the user to run sonarqube </h4>
+
+su - sonar 
+
+cd /opt/sonar/sonarqube
+
+ls 
+
+cd bin 
+
+ls 
+
+cd linux-x86-64
+
+ls 
+
+./sonar.sh start
+
+./sonar.sh status
+
+
+
+
+
+
+
+
+
+
 
