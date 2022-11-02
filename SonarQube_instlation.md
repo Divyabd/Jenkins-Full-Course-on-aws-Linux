@@ -65,6 +65,7 @@ ls
 
 
 <h5>Make sure your SG have below shown Inbound rules </h5>
+
 ![Make sure youe SG have below shown Inbound rules](pictures/security%20inbound.png?raw=true "Make sure youe SG have below shown Inbound rules")
 
 
