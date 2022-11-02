@@ -83,7 +83,7 @@ open the new tab and type your ec2 instance public ip:8080
    JAVA_HONE =/user/lib/jvm/java_1.01.0(filename)
    
    
-save and apply,  build the job 
+save and apply,  build the job  
 
 
 <h2> MAVEN INSTALATION AND CONFIGURATION</h2>
