@@ -11,7 +11,7 @@ pipeline{
 
         stage('Maven clean'){
             steps{
-                sh 'mvn -f Maven/pom.xml clean install
+                sh 'mvn -f Maven/pom.xml clean install'
             }
         }
     }
