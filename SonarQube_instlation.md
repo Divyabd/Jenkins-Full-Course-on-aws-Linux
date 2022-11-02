@@ -65,6 +65,8 @@ ls
 
 ![NOTE]("[/repository](https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git)/pictures/security inbound.png"?raw=true "make sure  instance having these inbound rules in attached SG")
 
+
+<img src="[url](https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git)/pictures/security inbound.png" width="50%" height="50%">
 https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git
 
 
