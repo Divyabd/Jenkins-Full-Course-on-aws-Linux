@@ -104,7 +104,7 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
   
   wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
   
-  tag -xvzf apache-maven-3.8.6-bin.tar.gz
+  tar -xvzf apache-maven-3.8.6-bin.tar.gz
   
   <h6>INSTALATION DNE </h6>
   
