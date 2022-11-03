@@ -47,11 +47,11 @@ Step 2 :  java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.
  
  BEFORE PATH 
   
-  PATH=$HOME:$HOME/bin
+  PATH=$PATH:$HOME/bin
   
   MODIFICATIONS NEED TO BE DONE LIKE 
   
-  PATH=$HOME:$JAVA_HOME:$HOME/bin
+  PATH=$PATH:$JAVA_HOME:$HOME/bin
   
   after all changes hit ESC then type :wq enter it will exit from vi editor 
   
