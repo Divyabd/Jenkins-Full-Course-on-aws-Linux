@@ -96,7 +96,11 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
   
   In you Linux system  execute below commands
   
-  cd /opt/maven 
+  cd /opt
+  
+  mkdir maven 
+  
+  cd maven 
   
   wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
   
