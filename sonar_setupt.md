@@ -16,3 +16,10 @@ Mange Jenkins -> configure system ->check on enviroment variable under sonarqube
 
 Manage jenkins -> tool configuration ->  sonarqube snaccer -> give name -> save 
 
+Manage jenkins -> tool configuration ->  Maven3 -> give name -> save
+
+
+Create free style job -> Git link -> check the box  prepare sonarqube env ( Dont add any credential) -> Build step -> Invoke top-level Maven targets -. Maven3 -> clean install sonar:sonar -> Maven/pom.xml Save and build 
+
+
+
