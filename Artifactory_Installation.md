@@ -39,3 +39,13 @@ Manage jenkins -> configure system -> jfrog -> give instance id (name) ->  give 
 
 
 
+NOTE::::::::::: (if test failed , click on advanced option and check for the artifact and sistribution atleast artifcatory should success)
+
+
+Create free style job ->Build Environment->Maven3-Artifactory Integration(Do select release and snapshot) -> Build Steps ->Invoke Artifactory Maven 3
+->  Maven/pom.xml -> clean install package 
+
+ Run the build and check the release 
+-
+ 
+
