@@ -26,7 +26,7 @@ find out root and add below line in next line
 
 sonar ALL=(ALL)   ALL
 
-controle X to exit 
+controle X to exit  or esc :wq
 
 to reopen it nano /etc/sudoers
 
