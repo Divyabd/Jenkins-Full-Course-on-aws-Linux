@@ -12,6 +12,8 @@ Copy the tocken somewhere else
 
 Goto Jenkins -> Manage Credentials -> add credential -> add secret text 
 
+Goto Jenkins -> Manage Credentials -> manage plugin -> sonarqube scanner
+
 Mange Jenkins -> configure system ->check on enviroment variable under sonarqube-> give name -> public ip:9000(where is your sonarqube is running)-> select the credential
 
 Manage jenkins -> tool configuration ->  sonarqube snaccer -> give name -> save 
