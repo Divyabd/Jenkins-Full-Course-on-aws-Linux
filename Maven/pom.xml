@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devopspract</groupId>
   <artifactId>DevopsMaven</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>DevopsMaven</name>
   <url>http://maven.apache.org</url>
   <dependencies>
