@@ -64,6 +64,8 @@ ls
 <h3> your ec2 instance public ip :9090</h3>
 
 
+NOTE : BY DEFAULT SONARQUBE USERNAME AND PASSWORD IS admin ,admin login and change the password
+
 <h5>Make sure your SG have below shown Inbound rules </h5>
 
 ![Make sure youe SG have below shown Inbound rules](pictures/security%20inbound.png?raw=true "Make sure youe SG have below shown Inbound rules")
