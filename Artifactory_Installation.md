@@ -1,4 +1,4 @@
-<h1>How to Install Artifactory in Ec2 Linux System</h1>
+<h1>How to Install Artifactory in Ec2 Linux System and Configuration with the Jenkins </h1>
 
 <h3>Pre-requisites</h3>
 
@@ -23,4 +23,19 @@ cd jfrog-artifactory-oss-6.9.6
 cd bin 
 
 ./artifactory.sh start
+
+
+After start access jenkins using Publicip:8081
+
+stup password -> skip(configure proxy server)-> Choose maven -> Finish it up 
+
+
+<h3> Jenkins configuration with Jfrog </h3>
+
+
+Open jenkins -> Manage Jenkins -> Manage plugins -> Install  Artifactory plugin -> install without restart 
+
+Manage jenkins -> configure system -> jfrog -> give instance id (name) ->  give server link where jfrog running -> give username and password (before to that create new user in jfron under admin section and give admin privilage access ) test the connection -> save and apply 
+
+
 
