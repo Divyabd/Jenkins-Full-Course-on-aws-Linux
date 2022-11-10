@@ -6,7 +6,7 @@ Change the  password
 
 Create new project 
 
-Jenerate the tocken 
+Generate the token 
 
 Copy the tocken somewhere else 
 
