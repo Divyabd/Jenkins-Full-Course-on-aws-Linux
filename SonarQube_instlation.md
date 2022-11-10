@@ -14,7 +14,7 @@ java version should 11
 
 unzip sonarqube-8.0.zip
 
-mv sonarqube-8.0.zip sonarqube
+mv sonarqube-8.0 sonarqube
 
 <h5> Create new user </h5>
 
