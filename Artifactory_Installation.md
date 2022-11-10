@@ -31,7 +31,7 @@ stup password -> skip(configure proxy server)-> Choose maven -> Finish it up
 
 
 <h3> Jenkins configuration with Jfrog </h3>
-
+ 
 
 Open jenkins -> Manage Jenkins -> Manage plugins -> Install  Artifactory plugin -> install without restart 
 
