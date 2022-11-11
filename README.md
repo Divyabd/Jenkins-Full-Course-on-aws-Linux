@@ -1,6 +1,6 @@
 # Jenkins-Full-Course-on-AWS-Linux
 Full steps of Jenkins On AWS Linux 
-![](pictures/jenkins%20linuc%20ec2.jpg.png?raw=true "")
+![hello](pictures/jenkins%20linuc%20ec2.jpg.png?raw=true "hii")
 
 
 <h1>  Create LINUX ec2 instance </h1>
