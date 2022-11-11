@@ -2,7 +2,7 @@
 
 <h3>Pre-requisites</h3>
 
-You need t2.medium instance or large te.micro wont work  and 
+You need t2.medium instance or large t2.micro wont work  and 
 
 Open port 8081 and 8082 in security group 
 
