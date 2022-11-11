@@ -123,7 +123,8 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
   Hit I in key board 
   
   M2_HOME=/opt/maven/apache-maven-3.8.6-bin
-  M2=$M2_HOME:bin
+ 
+ M2=$M2_HOME/bin
   
  PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
  
