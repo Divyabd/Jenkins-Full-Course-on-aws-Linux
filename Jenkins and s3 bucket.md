@@ -10,9 +10,9 @@ Create 1 s3 cuket in aws, any region
 
 jenkins -> Manage jenkins -> Manage plugins ->available plugins -> s3 publisher -> install without restart
 
-jenkins -> Manage jenkins -> system configuration -> s3 publisher -> give the name -> click on iam role ( dont give access key and secrete key ) -> save 
+jenkins -> Manage jenkins -> Configure System ->Amazon S3 profiles -> give the name -> click on Use iam role ( dont give access key and secrete key ) -> save 
 
-Create Maven Jov -> give all maven info -> after build ->in post build action -> select publish artifatcs to s3 bucjet -> give workspace where .jar file is storing ->have a file formate -> give s3 bucket name and region -> if you want give additional info -> save -> build now 
+Create Maven Job -> give all maven info -> after build ->in post build action -> select publish artifatcs to s3 bucjet -> give workspace where .jar file is storing ->have a file formate -> give s3 bucket name and region -> if you want give additional info -> save -> build now 
 
 
 
