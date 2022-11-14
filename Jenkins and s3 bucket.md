@@ -1,6 +1,6 @@
 <h1> Jenkins and aws service connection</h1>
 
-<h2> we are demostration How to deploy artifatcts to aws s5 bucket </h2>
+<h2> we are demostration How to deploy artifatcts to aws s3 bucket </h2>
 
 Create iam role -> name -> aw service -> under that select ec2 -> add s3 full access 
 
