@@ -2,6 +2,14 @@
 
 <h2>Installation of terraform on linux ec2</h2>
 
+Create iam role to run terraform via linux
+
+Iam -> role -> create new role -> aws service -> ec2 -> administration full access -> tags -> name -> create 
+
+once iam role creation done attach that role to ec2 instance where jenkins are running 
+
+select ec2 instance -> action -> security -> Modify iam role -> select newly created role 
+
 sudo su -
 
 cd /opt
@@ -28,6 +36,8 @@ whereis terraform
 Open jenkins -> Manage Jenkins -> Manage plugins -> available plugins -> Terraform -> Install without restart
 
 Open jenkins -> Manage Jenkins -> Global tool Configuration -> Terraform -> give name and install it -> save 
+
+Create new item -> name -> free style job -> select source code management and give git url where terraform code resides -> In Build Environment -> terraform -> Build step -> executable shell -> terraform -version 
 
 
 
