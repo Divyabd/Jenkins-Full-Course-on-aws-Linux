@@ -8,7 +8,7 @@ open ec2 instnace -> select ec2 on which jenkins are ruuning -> actions -> secur
 
 Create 1 s3 cuket in aws, any region 
 
-jenkins -> Manage jenkins -> Manage plugins -> s3 publisher -> install without restart
+jenkins -> Manage jenkins -> Manage plugins ->available plugins -> s3 publisher -> install without restart
 
 jenkins -> Manage jenkins -> system configuration -> s3 publisher -> give the name -> click on iam role ( dont give access key and secrete key ) -> save 
 
