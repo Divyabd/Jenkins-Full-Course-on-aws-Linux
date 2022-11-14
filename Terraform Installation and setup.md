@@ -18,4 +18,16 @@ To confirm terraform is installed run below command
 
 terraform -version 
 
+to know terraform path run the below command 
+
+whereis terraform
+
+
+<h3>Jenkins terraform integration </h3>
+
+Open jenkins -> Manage Jenkins -> Manage plugins -> available plugins -> Terraform -> Install without restart
+
+Open jenkins -> Manage Jenkins -> Global tool Configuration -> Terraform -> give name and install it -> save 
+
+
 
