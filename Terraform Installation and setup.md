@@ -37,7 +37,7 @@ Open jenkins -> Manage Jenkins -> Manage plugins -> available plugins -> Terrafo
 
 Open jenkins -> Manage Jenkins -> Global tool Configuration -> Terraform -> give name and install it -> save 
 
-Create new item -> name -> free style job -> select source code management and give git url where terraform code resides -> In Build Environment -> terraform -> Build step -> executable shell -> terraform -version 
+Create new item -> name -> free style job -> select source code management and give git url where terraform code resides -> In Build Environment -> terraform -> Build step -> executable shell -> terraform -version  -> save and run the build
 
 
 
