@@ -2,7 +2,7 @@
 
 <h2> we are demostration How to deploy artifatcts to aws s3 bucket </h2>
 
-Create iam role -> name -> aw service -> under that select ec2 -> add s3 full access 
+Create iam role -> name -> aw service -> under that select ec2 -> add permission s3 full access -> name it -> save 
 
 open ec2 instnace -> select ec2 on which jenkins are ruuning -> actions -> security -> modify iam role -> choose one you have created -> save 
 
