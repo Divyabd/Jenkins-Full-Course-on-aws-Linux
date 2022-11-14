@@ -12,7 +12,7 @@ jenkins -> Manage jenkins -> Manage plugins ->available plugins -> s3 publisher 
 
 jenkins -> Manage jenkins -> Configure System ->Amazon S3 profiles -> give the name -> click on Use iam role ( dont give access key and secrete key ) -> save 
 
-Create Maven Job -> give all maven info -> after build ->in post build action -> select publish artifatcs to s3 bucjet -> give workspace where .jar file is storing ->have a file formate -> give s3 bucket name and region -> if you want give additional info -> save -> build now 
+Create Maven Job -> give all maven info -> after build ->in post build action -> select Publish artifacts to S3 Bucket -> give workspace where .jar file is storing ->have a file formate -> give s3 bucket name and region -> if you want give additional info -> save -> build now 
 
 
 
