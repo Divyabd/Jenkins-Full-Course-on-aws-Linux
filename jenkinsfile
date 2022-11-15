@@ -4,28 +4,24 @@ pipeline{
 // environment{
 //     PATH="/opt/maven/apache-maven-3.8.6/bin:$PATH"
 // }
-tools{
-'maven' 'maven3'
-}
+
 
 
     stages{
 
-
+//   GIT checkout stage 
         stage('GIT CHECKOUT'){
             steps{
                 git 'https://github.com/Divyabd/Jenkins-Full-Course-on-aws-Linux.git'
             }
         }
 
-  stage('git '){
-            steps{
-               sh 'java -version'
-            }
-        }
 
-
+//  Maven build stage 
         stage('Maven clean'){
+            tools{
+'maven' 'maven3'
+}
             steps{
                 sh 'mvn -f Maven/pom.xml clean install'
                 sh 'mvn -f Maven/pom.xml install package'
