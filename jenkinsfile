@@ -30,11 +30,14 @@ tools{
 
 // Sonarqube intregration stage 
         stage("SonarQube intergration"){
-         withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
+            steps{
+                withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
     // some block
 
 }
 
+            }
+         
         }
     }
 }
