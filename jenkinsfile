@@ -4,7 +4,9 @@ pipeline{
 // environment{
 //     PATH="/opt/maven/apache-maven-3.8.6/bin:$PATH"
 // }
-
+tools{
+'maven' 'maven3'
+}
 
 
     stages{
@@ -19,9 +21,6 @@ pipeline{
 
 //  Maven build stage 
         stage('Maven clean'){
-            tools{
-'maven' 'maven3'
-}
             steps{
                 sh 'mvn -f Maven/pom.xml clean install'
                 sh 'mvn -f Maven/pom.xml install package'
