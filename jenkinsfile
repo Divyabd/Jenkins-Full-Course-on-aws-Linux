@@ -71,7 +71,7 @@ tools{
            "files": [
             {
               "pattern": "Maven/target/*.zip",
-              "target": "libs-snapshot-local/*"
+              "target": "libs-snapshot-local/"
             }
              ]
           }''',
