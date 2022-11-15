@@ -33,10 +33,59 @@ tools{
             steps{
                 withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
                 sh 'mvn -f Maven/pom.xml clean install sonar:sonar'
-}
+            }
 
             }
          
         }
+
+// Jfrog artifactory stage 
+
+//          stage("conning to jfrog artifactory"){
+//             steps{
+
+                   
+// rtServer (
+//     id: 'Artifactory-1',
+//     url: 'http://my-artifactory-domain/artifactory',
+//     // If you're using username and password:
+//     username: 'admin',
+//     password: 'Divya@1998',
+//     // If you're using Credentials ID:
+//     //credentialsId: 'ccrreeddeennttiiaall',
+//     // If Jenkins is configured to use an http proxy, you can bypass the proxy when using this Artifactory server:
+//     bypassProxy: true,
+//     // Configure the connection timeout (in seconds).
+//     // The default value (if not configured) is 300 seconds:
+//     timeout: 300
+// )
+//             }
+
+//        }
+
+       stage("uploading the file to artifact"){
+        steps{
+            rtUpload (
+              serverId: 'jenkins-artifact',
+                spec: '''{
+           "files": [
+            {
+              "pattern": "Maven/target/*.zip",
+              "target": "libs-snapshot-local "
+            }
+             ]
+          }''',
+ 
+    // Optional - Associate the uploaded files with the following custom build name and build number,
+    // as build artifacts.
+    // If not set, the files will be associated with the default build name and build number (i.e the
+    // the Jenkins job name and number).
+   // buildName: 'holyFrog',
+   // buildNumber: '42',
+    // Optional - Only if this build is associated with a project in Artifactory, set the project key as follows.
+   // project: 'my-project-key'
+)
+        }
+       }
     }
 }
