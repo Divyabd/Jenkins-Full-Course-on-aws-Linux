@@ -71,7 +71,7 @@ tools{
            "files": [
             {
               "pattern": "Maven/target/*.zip",
-              "target": "libs-snapshot-local/com/devopspract/DevopsMaven/1.0-SNAPSHOT"
+              "target": "libs-snapshot-local"
             }
              ]
           }''',
