@@ -32,8 +32,7 @@ tools{
         stage("SonarQube intergration"){
             steps{
                 withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
-    // some block
-
+                sh 'mvn clean install sonar:sonar'
 }
 
             }
