@@ -4,10 +4,10 @@ pipeline{
 // environment{
 //     PATH="/opt/maven/apache-maven-3.8.6/bin:$PATH"
 // }
-// tools{
-
-// }
+tools{
 tool name: 'maven3', type: 'maven'
+}
+
 
     stages{
 
