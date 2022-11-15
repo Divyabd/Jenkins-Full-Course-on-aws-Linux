@@ -5,7 +5,7 @@ pipeline{
 //     PATH="/opt/maven/apache-maven-3.8.6/bin:$PATH"
 // }
 tools{
-name: 'maven3', type: 'maven' 
+'maven' 'maven3'
 }
 
 
