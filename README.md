@@ -1,6 +1,8 @@
 # Jenkins-Full-Course-on-AWS-Linux
 Full steps of Jenkins On AWS Linux 
 
+
+
 <h1>  Create LINUX ec2 instance </h1>
 
 <h2>  Instalation of Java on ec2 </h2>
@@ -47,11 +49,11 @@ Step 2 :  java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.
  
  BEFORE PATH 
   
-  PATH=$HOME:$HOME/bin
+  PATH=$PATH:$HOME/bin
   
   MODIFICATIONS NEED TO BE DONE LIKE 
   
-  PATH=$HOME:$JAVA_HOME:$HOME/bin
+  PATH=$PATH:$JAVA_HOME:$HOME/bin
   
   after all changes hit ESC then type :wq enter it will exit from vi editor 
   
@@ -96,11 +98,15 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
   
   In you Linux system  execute below commands
   
-  cd /opt/maven 
+  cd /opt
+  
+  mkdir maven 
+  
+  cd maven 
   
   wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
   
-  tag -xvzf apache-maven-3.8.6-bin.tar.gz
+  tar -xvzf apache-maven-3.8.6-bin.tar.gz
   
   <h6>INSTALATION DNE </h6>
   
@@ -117,7 +123,8 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
   Hit I in key board 
   
   M2_HOME=/opt/maven/apache-maven-3.8.6-bin
-  M2=$M2_HOME:bin
+ 
+ M2=$M2_HOME/bin
   
  PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
  

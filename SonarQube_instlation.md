@@ -14,7 +14,7 @@ java version should 11
 
 unzip sonarqube-8.0.zip
 
-mv sonarqube-8.0.zip sonarqube
+mv sonarqube-8.0 sonarqube
 
 <h5> Create new user </h5>
 
@@ -26,7 +26,7 @@ find out root and add below line in next line
 
 sonar ALL=(ALL)   ALL
 
-controle X to exit 
+controle X to exit  or esc :wq
 
 to reopen it nano /etc/sudoers
 
@@ -63,6 +63,8 @@ ls
 
 <h3> your ec2 instance public ip :9090</h3>
 
+
+NOTE : BY DEFAULT SONARQUBE USERNAME AND PASSWORD IS admin ,admin login and change the password
 
 <h5>Make sure your SG have below shown Inbound rules </h5>
 
