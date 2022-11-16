@@ -5,6 +5,7 @@ pipeline{
 tools{
 'maven' 'maven3'
 'hudson.plugins.sonar.MsBuildSQRunnerInstallation' 'sonarQube'
+
 }
 
 
@@ -25,6 +26,7 @@ tools{
                 sh 'mvn -f Maven/pom.xml install package'
             }
         }
+
 
 // Sonarqube intregration stage 
 // Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
@@ -90,14 +92,37 @@ tools{
         }
        }
 
-       stage("Jenkins-jfrog"){
-steps{
+       stage("publish artifacts to artifactory "){
+              steps{
     
-rtPublishBuildInfo (
-    serverId: 'Jenkins-jfrog',
-)
-}
+                  rtPublishBuildInfo (
+                     serverId: 'Jenkins-jfrog',
+                   )
+               }
        }
+
+       stage("Terraform init"){
+       steps{
+         sh 'terraform -chdir=Terraform init'
+
+       }
+       }
+       stage("Terraform plan"){
+       steps{
+         sh 'terraform -chdir=Terraform plan'
+         
+       }
+       }
+
+     stage("Terraform apply"){
+       steps{
+         sh 'terraform -chdir=Terraform apply'
+         
+       }
+       }
+
+
+
 
 
     }
