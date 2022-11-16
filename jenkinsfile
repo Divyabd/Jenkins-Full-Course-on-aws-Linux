@@ -5,6 +5,7 @@ pipeline{
 tools{
 'maven' 'maven3'
 'hudson.plugins.sonar.MsBuildSQRunnerInstallation' 'sonarQube'
+'terraform' 'terraform'
 
 }
 
@@ -116,7 +117,7 @@ tools{
 
      stage("Terraform apply"){
        steps{
-         sh 'terraform -chdir=Terraform apply'
+         sh 'terraform -chdir=Terraform apply -auto-approve'
          
        }
        }
