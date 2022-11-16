@@ -27,7 +27,7 @@ cd bin
 
 After start access jenkins using Publicip:8081
 
-stup password -> skip(configure proxy server)-> Choose maven -> Finish it up 
+setup password -> skip(configure proxy server)-> Choose maven -> Finish it up 
 
 
 <h3> Jenkins configuration with Jfrog </h3>
