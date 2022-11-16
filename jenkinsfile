@@ -121,6 +121,12 @@ tools{
        }
        }
 
+     stage("Terraform destroy"){
+       steps{
+         sh 'terraform -chdir=Terraform destroy --input=false tfplan'
+         
+       }
+       }
 
 
 
