@@ -70,8 +70,8 @@ tools{
                 spec: '''{
            "files": [
             {
-              "pattern": "Maven/target/*.zip",
-              "target": "libs-release-local/"
+              "pattern": "/var/lib/jenkins/workspace/First pipeline/Maven/target/*.jar",
+              "target": "libs-snapshot-local/com/devopspract/DevopsMaven/1.0-SNAPSHOT/"
             }
              ]
           }''',
