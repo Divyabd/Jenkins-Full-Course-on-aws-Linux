@@ -5,7 +5,6 @@ pipeline{
 tools{
 'maven' 'maven3'
 'hudson.plugins.sonar.MsBuildSQRunnerInstallation' 'sonarQube'
-'terraform' 'terraform'
 
 }
 
