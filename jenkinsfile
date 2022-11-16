@@ -1,9 +1,7 @@
 pipeline{
     agent any
 
-// environment{
-//     PATH="/opt/maven/apache-maven-3.8.6/bin:$PATH"
-// }
+
 tools{
 'maven' 'maven3'
 'hudson.plugins.sonar.MsBuildSQRunnerInstallation' 'sonarQube'
@@ -62,6 +60,8 @@ tools{
 //             }
 
 //        }
+
+// Uploading the  executable file to artifactory 
 
        stage("uploading the file to artifact"){
         steps{
