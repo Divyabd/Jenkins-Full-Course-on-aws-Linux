@@ -27,6 +27,7 @@ tools{
         }
 
 // Sonarqube intregration stage 
+// Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
         stage("SonarQube intergration"){
             steps{
                 withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
@@ -62,6 +63,7 @@ tools{
 //        }
 
 // Uploading the  executable file to artifactory 
+// Link https://www.jfrog.com/confluence/display/JFROG/Declarative+Pipeline+Syntax
 
        stage("uploading the file to artifact"){
         steps{
@@ -93,18 +95,10 @@ steps{
     
 rtPublishBuildInfo (
     serverId: 'Jenkins-jfrog',
-    // The buildName and buildNumber below are optional. If you do not set them, the Jenkins job name is used
-    // as the build name. The same goes for the build number.
-    // If you choose to set custom build name and build number by adding the following buildName and
-    // buildNumber properties, you should make sure that previous build steps (for example rtDownload
-    // and rtIpload) have the same buildName and buildNumber set. If they don't, then these steps will not
-    // be included in the build-info.
-    // buildName: 'holyFrog',
-    // buildNumber: '42',
-    // // Optional - Only if this build is associated with a project in Artifactory, set the project key as follows.
-    // project: 'my-project-key'
 )
 }
        }
+
+
     }
 }
