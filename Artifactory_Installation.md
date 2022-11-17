@@ -8,7 +8,10 @@ Open port 8081 and 8082 in security group
 
 You need java to be installed 
 
-cd opt 
+cd /opt 
+
+mkdir jfrog
+
 
 cd jfrog
 
