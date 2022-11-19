@@ -43,7 +43,7 @@ tools{
 
 stage("sonarqube quality gate check"){
   steps{
-  
+  tool name: 'sonarQube', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
     // some block
 }
