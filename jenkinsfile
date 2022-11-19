@@ -4,7 +4,7 @@ pipeline{
 
 tools{
 'maven' 'maven3'
-'hudson.plugins.sonar.SonarRunnerInstallation' 'sonar'
+'hudson.plugins.sonar.SonarRunnerInstallation' 'sonarQube'
 
 }
 
@@ -33,7 +33,7 @@ tools{
 
         stage("SonarQube intergration"){
             steps{
-              withSonarQubeEnv(installationName:'sonar' ,credentialsId: 'jenkins-sonarqube') {
+              withSonarQubeEnv(installationName:'sonarQube' ,credentialsId: 'jenkins-sonarqube') {
                 sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
             }
 
