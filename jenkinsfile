@@ -108,12 +108,12 @@ tools{
        }
        }
 
-    //  stage("Terraform apply"){
-    //    steps{
-    //      sh 'terraform -chdir=Terraform apply -auto-approve'
+     stage("Terraform apply"){
+       steps{
+         sh 'terraform -chdir=Terraform apply -auto-approve'
          
-    //    }
-    //    }
+       }
+       }
 
 
 // stage(" terraform destroy"){
