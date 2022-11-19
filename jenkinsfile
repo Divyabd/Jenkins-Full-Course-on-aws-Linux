@@ -30,8 +30,7 @@ tools{
 
 // Sonarqube intregration stage 
 // Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
-// Sonarqube intregration stage 
-// Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
+
         stage("SonarQube intergration"){
             steps{
                 withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
@@ -124,17 +123,17 @@ tools{
        }
 
 
-// stage(" terraform destroy"){
-//     steps{
-//         sh 'terraform -chdir=Terraform destroy -auto-approve'
-//     }
-// }
-
-stage("s3 artifacts"){
-  steps{
-    s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'mybucketdivyademo12', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'us-east-1', showDirectlyInBrowser: false, sourceFile: '**/*/*.jar', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'aws s3', userMetadata: []
-  }
+stage(" terraform destroy"){
+    steps{
+        sh 'terraform -chdir=Terraform destroy -auto-approve'
+    }
 }
+
+// stage("s3 artifacts"){
+//   steps{
+//     s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'mybucketdivyademo12', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'us-east-1', showDirectlyInBrowser: false, sourceFile: '**/*/*.jar', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'aws s3', userMetadata: []
+//   }
+// }
 
 
 
