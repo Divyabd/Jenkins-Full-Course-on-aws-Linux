@@ -116,11 +116,11 @@ tools{
        }
        
 
-stage(" terraform destroy"){
-    steps{
-        sh 'terraform -chdir=Terraform destroy -auto-approve'
-    }
-}
+// stage(" terraform destroy"){
+//     steps{
+//         sh 'terraform -chdir=Terraform destroy -auto-approve'
+//     }
+// }
 
 // Artifactory stage 
 stage("s3 artifacts"){
