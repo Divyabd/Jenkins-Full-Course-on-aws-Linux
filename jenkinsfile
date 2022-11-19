@@ -33,7 +33,7 @@ tools{
         stage("SonarQube intergration"){
             steps{
                   withSonarQubeEnv(installationName: 'sonarQube' ,credentialsId: 'jenkins-sonarqube') {
-                sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+                sh 'mvn -f Maven/pom.xml clean install sonar:sonar'
            
             }
 
