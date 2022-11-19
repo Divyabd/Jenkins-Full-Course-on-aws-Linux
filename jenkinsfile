@@ -20,26 +20,26 @@ tools{
 
 
 //  Maven build stage 
-        stage('Maven clean'){
-            steps{
-                sh 'mvn -f Maven/pom.xml clean install'
-                sh 'mvn -f Maven/pom.xml install package'
-            }
-        }
+        // stage('Maven clean'){
+        //     steps{
+        //         sh 'mvn -f Maven/pom.xml clean install'
+        //         sh 'mvn -f Maven/pom.xml install package'
+        //     }
+        // }
 
 
 // Sonarqube intregration stage 
 // Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
 
-        stage("SonarQube intergration"){
-            steps{
-                withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
-                sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
-            }
+        // stage("SonarQube intergration"){
+        //     steps{
+        //         withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
+        //         sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+        //     }
 
-            }
+        //     }
          
-        }
+        // }
 
 // Jfrog artifactory stage 
 
