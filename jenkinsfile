@@ -30,30 +30,18 @@ tools{
 
 // Sonarqube intregration stage 
 // Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
+// Sonarqube intregration stage 
+// Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
         stage("SonarQube intergration"){
             steps{
-                  withSonarQubeEnv(installationName: 'sonarQube' ,credentialsId: 'jenkins-sonarqube') {
-                sh 'mvn -f Maven/pom.xml clean install sonar:sonar'
-           
+                withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
+                sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
             }
 
             }
          
         }
 
-stage("sonarqube quality gate check"){
-  steps{
- // tool name: 'sonarQube', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
-   withSonarQubeEnv(installationName: 'sonarQube' ,credentialsId: 'jenkins-sonarqube') {
-    // some block 
-   
-        waitForQualityGate abortPipeline: true
-    
-}
-    
-    
-  }
-}
 // Jfrog artifactory stage 
 
 //          stage("conning to jfrog artifactory"){
