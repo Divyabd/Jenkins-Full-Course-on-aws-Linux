@@ -32,8 +32,11 @@ tools{
 // Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
         stage("SonarQube intergration"){
             steps{
-                withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
-                sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+                // withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
+                // sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+                withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
+                  sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+                }
             }
 
             }
@@ -43,11 +46,11 @@ tools{
 stage("sonarqube quality gate check"){
   steps{
     script{
-      withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
-       // waitForQualityGate abortPipeline: false
+      // withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
+      //  // waitForQualityGate abortPipeline: false
        waitForQualityGate abortPipeline: true
     // some block
-         }
+       //  }
     
     }
   }
