@@ -34,25 +34,23 @@ tools{
             steps{
                 withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
                 sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
-                waitForQualityGate abortPipeline: true
+           
             }
 
             }
          
         }
 
-// stage("sonarqube quality gate check"){
-//   steps{
-//     script{
-//      withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
-//        // waitForQualityGate abortPipeline: false
-//        waitForQualityGate abortPipeline: true
-//     // some block
-//          }
+stage("sonarqube quality gate check"){
+  steps{
+  
+   withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
+    // some block
+}
     
-//     }
-//   }
-// }
+    
+  }
+}
 // Jfrog artifactory stage 
 
 //          stage("conning to jfrog artifactory"){
