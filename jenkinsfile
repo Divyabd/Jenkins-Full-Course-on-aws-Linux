@@ -19,7 +19,7 @@ tools{
         }
 
 
- Maven build stage 
+ //Maven build stage 
         stage('Maven clean'){
             steps{
                 sh 'mvn -version'
@@ -65,7 +65,7 @@ tools{
 //             }
 
 //        }
-/*
+
 // Uploading the  executable file to artifactory 
 // Link https://www.jfrog.com/confluence/display/JFROG/Declarative+Pipeline+Syntax
 
@@ -82,14 +82,6 @@ tools{
              ]
           }''',
  
-    // Optional - Associate the uploaded files with the following custom build name and build number,
-    // as build artifacts.
-    // If not set, the files will be associated with the default build name and build number (i.e the
-    // the Jenkins job name and number).
-   // buildName: 'holyFrog',
-   // buildNumber: '42',
-    // Optional - Only if this build is associated with a project in Artifactory, set the project key as follows.
-   // project: 'my-project-key'
 )
         }
        }
@@ -102,7 +94,7 @@ tools{
                    )
                }
        }
-*/
+
        stage("Terraform init"){
        steps{
          sh 'terraform -chdir=Terraform init'
