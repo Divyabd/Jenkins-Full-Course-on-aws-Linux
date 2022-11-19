@@ -33,7 +33,7 @@ tools{
         stage("SonarQube intergration"){
             steps{
                 withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
-                sh 'mvn -f Maven/pom.xml clean install sonar:sonar'
+                sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
             }
 
             }
@@ -44,7 +44,7 @@ stage("sonarqube quality gate check"){
   steps{
     script{
       withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
-       // waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube'
+        waitForQualityGate abortPipeline: false
     // some block
          }
     
