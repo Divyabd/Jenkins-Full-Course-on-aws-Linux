@@ -63,7 +63,7 @@ tools{
 //             }
 
 //        }
-
+/*
 // Uploading the  executable file to artifactory 
 // Link https://www.jfrog.com/confluence/display/JFROG/Declarative+Pipeline+Syntax
 
@@ -100,7 +100,7 @@ tools{
                    )
                }
        }
-
+*/
        stage("Terraform init"){
        steps{
          sh 'terraform -chdir=Terraform init'
@@ -122,12 +122,17 @@ tools{
        }
 
 
-stage(" terraform destroy"){
-    steps{
-        sh 'terraform -chdir=Terraform destroy -auto-approve'
-    }
-}
+// stage(" terraform destroy"){
+//     steps{
+//         sh 'terraform -chdir=Terraform destroy -auto-approve'
+//     }
+// }
 
+stage("s3 artifacts"){
+  steps{
+    s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'mybucketdivyademo', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'us-east-1', showDirectlyInBrowser: false, sourceFile: '**/*/*.jar', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'aws s3', userMetadata: []
+  }
+}
 
 
 
