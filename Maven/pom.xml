@@ -48,7 +48,7 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>2.5</version>
       </plugin>
-    </plugins>
+ 
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
