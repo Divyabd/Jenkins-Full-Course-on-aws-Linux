@@ -116,7 +116,6 @@ tools{
        }
        
 
-
 // stage(" terraform destroy"){
 //     steps{
 //         sh 'terraform -chdir=Terraform destroy -auto-approve'
