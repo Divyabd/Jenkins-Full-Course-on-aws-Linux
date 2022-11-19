@@ -40,6 +40,11 @@ tools{
          
         }
 
+stage("sonarqube quality gate check"){
+  steps{
+    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube'
+  }
+}
 // Jfrog artifactory stage 
 
 //          stage("conning to jfrog artifactory"){
