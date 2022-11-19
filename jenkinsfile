@@ -19,13 +19,14 @@ tools{
         }
 
 
-//  Maven build stage 
-        // stage('Maven clean'){
-        //     steps{
-        //         sh 'mvn -f Maven/pom.xml clean install'
-        //         sh 'mvn -f Maven/pom.xml install package'
-        //     }
-        // }
+ Maven build stage 
+        stage('Maven clean'){
+            steps{
+                sh 'mvn -version'
+                sh 'mvn -f Maven/pom.xml clean install'
+                sh 'mvn -f Maven/pom.xml install package'
+            }
+        }
 
 
 // Sonarqube intregration stage 
