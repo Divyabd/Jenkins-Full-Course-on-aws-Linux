@@ -43,7 +43,11 @@ tools{
 stage("sonarqube quality gate check"){
   steps{
     script{
-    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube'
+      withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
+        waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube'
+    // some block
+}
+    
     }
   }
 }
