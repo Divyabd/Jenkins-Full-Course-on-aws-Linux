@@ -36,7 +36,7 @@ tools{
                 // sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
                 withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
                   sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
-                }
+               // }
             }
 
             }
