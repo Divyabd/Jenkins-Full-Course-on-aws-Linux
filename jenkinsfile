@@ -34,7 +34,7 @@ tools{
             steps{
                 // withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
                 // sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
-                withSonarQubeEnv(credentialsId: 'jenkins-sonarqube') {
+                withSonarQubeEnv(credentialsId: 'jenkins-sonarqube', variable: '') {
                   sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
                // }
             }
