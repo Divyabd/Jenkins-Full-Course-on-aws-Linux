@@ -8,7 +8,10 @@ Open port 8081 and 8082 in security group
 
 You need java to be installed 
 
-cd opt 
+cd /opt 
+
+mkdir jfrog
+
 
 cd jfrog
 
@@ -27,7 +30,7 @@ cd bin
 
 After start access jenkins using Publicip:8081
 
-stup password -> skip(configure proxy server)-> Choose maven -> Finish it up 
+setup password -> skip(configure proxy server)-> Choose maven -> Finish it up 
 
 
 <h3> Jenkins configuration with Jfrog </h3>
