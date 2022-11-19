@@ -31,15 +31,15 @@ tools{
 // Sonarqube intregration stage 
 // Link : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
 
-        // stage("SonarQube intergration"){
-        //     steps{
-        //         withCredentials([string(credentialsId: 'jenkins-sonarqube', variable: '')]) {
-        //         sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
-        //     }
+        stage("SonarQube intergration"){
+            steps{
+              withSonarQubeEnv(installationName:'sonarQube' ,credentialsId: 'jenkins-sonarqube') {
+                sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+            }
 
-        //     }
+            }
          
-        // }
+        }
 
 // Jfrog artifactory stage 
 
