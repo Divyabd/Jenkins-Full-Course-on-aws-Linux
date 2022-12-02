@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage("sonartest"){
                 steps{
-                    withSonarQubeEnv('jenkins-sonarqube') {
+                    withSonarQubeEnv('sonarQube') {
        sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
 }
                 }
