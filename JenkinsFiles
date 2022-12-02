@@ -14,7 +14,7 @@ pipeline{
 
 stage("ho"){
     steps{
-        withSonarQubeEnv(credentialsId: 'bae0ce70-1532-40b2-8160-badf84a969fb') {
+        withSonarQubeEnv('bae0ce70-1532-40b2-8160-badf84a969fb') {
               sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
     // some block
 }
