@@ -1,0 +1,13 @@
+pipeline{
+    agent any{
+        stages{
+            stage("sonartest"){
+                steps{
+                    withSonarQubeEnv('jenkins-sonarqube') {
+       sh 'mvn -f Maven/pom.xml clean install package sonar:sonar'
+}
+                }
+            }
+        }
+    }
+}
