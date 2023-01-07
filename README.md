@@ -1,4 +1,4 @@
-# Jenkins-Full-Course-on-AWS-Linux
+# Jenkins-Full-Course-On-AWS-Linux
 
 Full steps of Jenkins On AWS Linux 
 
