@@ -6,60 +6,12 @@ Full steps of Jenkins On AWS Linux
 
 <h1>  Create LINUX ec2 instance </h1>
 
-<h2>  Instalation of Java on ec2 </h2>
-
-Step 1. To install Java 11 on Amazon Linux 2, 
-
-run:
-sudo amazon-linux-extras install java-openjdk11
-
-Step 2. Verify the installation.
-
-java -version
-
-Step 3. If you have a multi-java environment, and you want to switch the java version, run:
-
-alternatives --config java
-
-
-<h2>  to switch to root user  </h2>
-
-Become root using “sudo su -” command.
-
-<h2>To set path for JAVA</h2>
-
-You can use any step to get your java installed path 
-
-Step 1 : sudo find /usr/ -name *jdk
-
-Step 2 :  java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'
-
- Result : /user/lib/jvm/java_1.01.0(filename)
- 
- NOTE:Copy the path 
- 
- open .bash_profile using the below command 
- 
- vi .bash_profile
- 
- Once file is opened hit I on keyboard, in a new line enter the below line 
- 
- JAVA_HOME= /user/lib/jvm/java_1.01.0(filename)
- 
- Modify the path 
- 
- BEFORE PATH 
-  
-  PATH=$PATH:$HOME/bin
-  
-  MODIFICATIONS NEED TO BE DONE LIKE 
-  
-  PATH=$PATH:$JAVA_HOME:$HOME/bin
-  
-  after all changes hit ESC then type :wq enter it will exit from vi editor 
-  
-
 <h2> To install Jenkins  </h2>
+
+
+  Follow the Below Link ( Official Document)  : https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
+  
+      (OR )
 
   sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
   
