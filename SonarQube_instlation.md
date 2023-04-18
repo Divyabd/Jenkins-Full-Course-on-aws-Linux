@@ -10,7 +10,7 @@ sudo yum install wget unzip -y
 
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.0.zip
 
-java version should 11 
+java version should 11 ( cmd : java --version) ( command to install java : sudo dnf install java-11-amazon-corretto -y)
 
 unzip sonarqube-8.0.zip
 
