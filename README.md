@@ -65,7 +65,7 @@ Link : https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/
   
   <h5> to set up the path </h5>
   
-  cd apache-maven-3.8.8-bin
+  cd apache-maven-3.8.8
   
   run <h4>pwd</h4> command to find path where maven installed copy the path run below command
   
