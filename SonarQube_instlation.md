@@ -61,7 +61,7 @@ ls
 ./sonar.sh status
 
 
-<h3> your ec2 instance public ip :9090</h3>
+<h3> your ec2 instance public ip :9000</h3>
 
 
 NOTE : BY DEFAULT SONARQUBE USERNAME AND PASSWORD IS admin ,admin login and change the password
